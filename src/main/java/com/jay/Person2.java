@@ -1,16 +1,14 @@
 package com.jay;
 
-public class Person {
+public class Person2 {
 	private String name;
 	private int age;
-	private String sex;
-	public Person(String name, int age, String sex) {
+	public Person2(String name, int age) {
 		super();
 		this.name = name;
 		this.age = age;
-		this.sex = sex;
 	}
-	public Person() {
+	public Person2() {
 		// TODO Auto-generated constructor stub
 	}
 	public String getName() {
@@ -25,15 +23,9 @@ public class Person {
 	public void setAge(int age) {
 		this.age = age;
 	}
-	public String getSex() {
-		return sex;
-	}
-	public void setSex(String sex) {
-		this.sex = sex;
-	}
 	@Override
 	public String toString() {
-		return String.format("Person [name=%s, age=%s, sex=%s]", name, age, sex);
+		return String.format("Person [name=%s, age=%s]", name, age);
 	}
 
 }
