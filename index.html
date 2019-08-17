@@ -1,0 +1,110 @@
+<html>
+
+<head>
+    <title>Account Grouping QA Adjustments</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+    <script th:src="@{/js/common.js}"></script>
+    <style>
+        #message {
+            align-items: center;
+        }
+
+        textarea {
+            width: 200px;
+            height: 200px;
+        }
+
+        #textareaDiv {
+            align-content: center;
+        }
+
+        td {
+            background-color: rgb(235, 231, 231);
+            border: 1px thin black;
+            width: auto;
+            border: 1px solid slategray;
+        }
+
+        thead {
+            font-weight: bold;
+            border: '1px thin black';
+            background: #252b35;
+            color: #ffffff;
+        }
+
+        thead td {
+            border-width: 1px;
+            background: #454950;
+        }
+
+        .hoverdisplay {
+            position: relative;
+            /* display: inline-block; */
+            /* border-bottom: 1px dotted black; */
+        }
+
+        .hoverdisplay .missingfield,
+        .hoverdisplay .dateformat {
+            visibility: hidden;
+            width: auto;
+            font-weight: bolder;
+            background-color: #ffffff;
+            color: #000000;
+            text-align: center;
+            border-radius: 1px;
+            padding: 5px 2px 1px 1px;
+            transition: .25s ease-out;
+            opacity: 0;
+
+            /* Position the tooltip */
+            position: absolute;
+            z-index: 1;
+        }
+
+        .hoverdisplay:hover .missingfield {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .hoverdisplay:hover .dateformat {
+            visibility: visible;
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!--<h1>jQuery get textbox value example</h1>-->
+
+    <h2>QA Adjustments<label id="msg"></label></h2>
+
+    <div style="display: inline-flex; width: 100%; margin: 0; padding: 0; top: 0; left:0; right: 0;">
+        <div id="textareaDiv"
+             style="width: 25%;">
+            <form id="scriptsform">
+                <textarea id="message"
+                          name="message"></textarea>
+                <input type="submit"
+                       value="execute"/>
+            </form>
+
+            <div id='response'></div>
+        </div>
+        <div id="result1div"
+             style="width: 70%;">
+            <table id="result1"
+                   style="width: 100%;">
+            </table>
+        </div>
+        <div id="result2div"
+             style="display:none; width: 70%">
+            <table id="result2"
+                   style="border: 1px solid slategray;">
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>
